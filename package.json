@@ -1,10 +1,14 @@
 {
-  "name": "y",
+  "name": "auth0-next-final",
   "version": "1.0.0",
   "description": "POC for sharing Auth0 user credentials via module federation for NextJS and React Applications",
   "main": "index.js",
+  "workspaces": [
+    "./host",
+    "./remote"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"cd host; npm run dev\" \"cd remote; npm run dev\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/haydenbass13/auth0-next-final/issues"
   },
-  "homepage": "https://github.com/haydenbass13/auth0-next-final#readme"
+  "homepage": "https://github.com/haydenbass13/auth0-next-final#readme",
+  "devDependencies": {
+    "concurrently": "7.3.0"
+  }
 }

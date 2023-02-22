@@ -9,6 +9,6 @@ export default function React() {
     const { user, isLoading } = useUser()
 
     return (
-        <RemoteReactApp auth={user?.given_name} />
+        <RemoteReactApp user={user} isLoading={isLoading} />
     );
 }

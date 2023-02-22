@@ -1,16 +1,16 @@
-import { useUser } from '@auth0/nextjs-auth0'
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0';
 
-export default function Home() {
+function Home() {
   const { user, isLoading } = useUser()
 
   return (
     <div>
-
-      Auth: {user?.given_name}
       <main>
-        This is the next home page
+        <h1>This is the next home page</h1>
+        <h2>Authorized as {user?.given_name} | {user?.email}</h2>
       </main>
-
     </div>
   );
 }
+
+export default withPageAuthRequired(Home)

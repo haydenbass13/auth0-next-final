@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
 
         <NextNav />
         <main>
-          <Component {...pageProps} auth={pageProps.user} />
+          <Component {...pageProps} />
         </main>
 
       </div>

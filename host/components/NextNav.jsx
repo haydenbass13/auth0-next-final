@@ -23,7 +23,7 @@ export default function nav() {
             }}>
                 <Link href="/hello-dynamic-page">Dynamic Page</Link>
                 <Link href="/react">React</Link>
-                <Link href="/profile">React</Link>
+                <Link href="/profile">Profile</Link>
                 <Link href="/api/auth/login">Login</Link>
                 <Link href="/api/auth/logout">Logout</Link>
             </div>

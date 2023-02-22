@@ -1,9 +1,12 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { useUser } from '@auth0/nextjs-auth0'
+
 
 const Post = ({ auth }) => {
     const router = useRouter()
     const { pid } = router.query
+    const { user, isLoading } = useUser()
 
     function updateRoute(event) {
         event.preventDefault()
@@ -18,7 +21,7 @@ const Post = ({ auth }) => {
 
         <div>
             <h1>Page ID: {pid}</h1>
-            Auth: {auth}
+            <h2>Authorized as {user?.given_name} | {user?.email}</h2>
             <dl>
                 <dt><h2><a href="https://nextjs.org/docs/routing/dynamic-routes" target="_blank" style={{
                     textDecoration: 'underline',

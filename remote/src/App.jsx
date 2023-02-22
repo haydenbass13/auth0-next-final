@@ -1,6 +1,6 @@
 import React from 'react';
 
-function App({ auth }) {
+function App({ user }) {
   return (
     <>
 
@@ -9,8 +9,9 @@ function App({ auth }) {
         height: '200px',
         textAlign: 'center'
       }}>
-        <p>Auth: {auth}</p>
-        This is the Remote React App</div>
+        <h1>This is the Remote React App</h1>
+        <h2>Authorized as {user?.given_name} | {user?.email}</h2>
+      </div>
     </>
   );
 }

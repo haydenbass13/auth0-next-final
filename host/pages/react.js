@@ -1,14 +1,16 @@
 import dynamic from 'next/dynamic';
-import { useUser } from '@auth0/nextjs-auth0'
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0'
 
 const RemoteReactApp = dynamic(() => import('remote/ReactApp'), {
     ssr: false,
 });
 
-export default function React() {
+function React() {
     const { user, isLoading } = useUser()
 
     return (
         <RemoteReactApp user={user} isLoading={isLoading} />
     );
 }
+
+export default withPageAuthRequired(React)

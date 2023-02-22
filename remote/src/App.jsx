@@ -5,7 +5,7 @@ function App({ user }) {
     <>
 
       <div style={{
-        border: "2px green solid",
+        border: "5px #ffcc5b solid",
         height: '200px',
         textAlign: 'center'
       }}>

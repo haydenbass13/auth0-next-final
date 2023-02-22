@@ -5,7 +5,7 @@ const RemoteReactApp = dynamic(() => import('remote/ReactApp'), {
     ssr: false,
 });
 
-function React() {
+export default function React() {
     const { user, isLoading } = useUser()
 
     return (
@@ -13,4 +13,4 @@ function React() {
     );
 }
 
-export default withPageAuthRequired(React)
+export const getServerSideProps = withPageAuthRequired()

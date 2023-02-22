@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { useUser } from '@auth0/nextjs-auth0'
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0'
 
 
-const Post = ({ auth }) => {
+export default function Post({ auth }) {
     const router = useRouter()
     const { pid } = router.query
     const { user, isLoading } = useUser()
@@ -40,4 +40,4 @@ const Post = ({ auth }) => {
     )
 }
 
-export default Post
+export const getServerSideProps = withPageAuthRequired()

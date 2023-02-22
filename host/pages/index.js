@@ -1,6 +1,6 @@
 import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0';
 
-function Home() {
+export default function Home() {
   const { user, isLoading } = useUser()
 
   return (
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default withPageAuthRequired(Home)
+export const getServerSideProps = withPageAuthRequired()

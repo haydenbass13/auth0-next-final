@@ -2,7 +2,6 @@ import Head from 'next/head';
 import NextNav from '../components/NextNav';
 import '../styles/globals.css';
 import { UserProvider } from '@auth0/nextjs-auth0'
-import { useUser } from '@auth0/nextjs-auth0'
 
 function MyApp({ Component, pageProps }) {
 

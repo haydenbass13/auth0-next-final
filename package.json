@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "POC for sharing Auth0 user credentials via module federation for NextJS and React Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haydenbass13/auth0-next-final.git"
+  },
+  "author": "Hayden Bass",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haydenbass13/auth0-next-final/issues"
+  },
+  "homepage": "https://github.com/haydenbass13/auth0-next-final#readme"
+}

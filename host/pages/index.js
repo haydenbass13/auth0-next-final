@@ -7,10 +7,10 @@ export default function Home() {
     <div>
       <main>
         <h1>This is the next home page</h1>
-        <h2>Authorized as {user?.given_name} | {user?.email}</h2>
+        {user?.email ? <h2>Authorized as {user?.given_name} | {user?.email}</h2> : ''}
       </main>
     </div>
   );
 }
 
-export const getServerSideProps = withPageAuthRequired()
+// export const getServerSideProps = withPageAuthRequired()

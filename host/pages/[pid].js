@@ -23,7 +23,7 @@ export default function Post({ auth }) {
             <h1>Page ID: {pid}</h1>
             <h2>Authorized as {user?.given_name} | {user?.email}</h2>
             <dl>
-                <dt><h2><a href="https://nextjs.org/docs/routing/dynamic-routes" target="_blank" style={{
+                <dt><h2><a href="https://nextjs.org/docs/routing/dynamic-routes" target="_blank" rel="noreferrer" style={{
                     textDecoration: 'underline',
                     color: '#9c005e'
                 }}>Next Dynamic Route</a></h2></dt>
